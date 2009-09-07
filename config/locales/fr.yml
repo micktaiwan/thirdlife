@@ -1,0 +1,12 @@
+fr:
+  log_in:           "S'identifier"
+  signup:           "Ouvrir un compte"
+  log_out:          "Déconnexion"
+  send_data:        "Envoyer"
+
+# characters
+
+  create_character: "Créer un nouveau personnage"
+  character_name:   "Nom"
+  created_msg:      "Un nouveau bébé est né"
+  

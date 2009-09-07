@@ -3,13 +3,15 @@
 <title>ThirdLife</title>
 </head>
 <body>
-ThirdLife<br/>
+<h1>ThirdLife</h1>
 <% if not logged_in? %>
-<%= link_to('login', :controller=>:sessions, :action=>:new) %>
-<%= link_to('signup', :controller=>:users, :action=>:new) %>
+<%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new) %>
+<%= link_to(I18n.t(:signup), :controller=>:users, :action=>:new) %>
 <% else %>
-<%= link_to('log out', :controller=>:sessions, :action=>:destroy) %>
+<%= link_to(I18n.t(:log_out), :controller=>:sessions, :action=>:destroy) %>
 <% end %>
+<a href="/?locale=en">English</a>
+<a href="/?locale=fr">Français</a>
 <br/>
 <br/>
 <%= yield %>
