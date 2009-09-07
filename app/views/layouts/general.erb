@@ -4,6 +4,13 @@
 </head>
 <body>
 ThirdLife<br/>
+<% if not logged_in? %>
+<%= link_to('login', :controller=>:sessions, :action=>:new) %>
+<%= link_to('signup', :controller=>:users, :action=>:new) %>
+<% else %>
+<%= link_to('log out', :controller=>:sessions, :action=>:destroy) %>
+<% end %>
+<br/>
 <br/>
 <%= yield %>
 </body>
