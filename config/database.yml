@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  database: tl_development
+  username: root
+  password: 24048mic
+  socket: /var/run/mysqld/mysqld.sock
+  host: localhost
+
+test:
+  adapter: mysql
+  database: tl_test
+  username: root
+  password: 24048mic
+  socket: /var/run/mysqld/mysqld.sock
+  host: localhost
+
+production:
+  adapter: mysql
+  database: tl_development
+  username: root
+  password: 24048mic
+  socket: /var/run/mysqld/mysqld.sock
+  host: localhost

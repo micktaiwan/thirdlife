@@ -1,0 +1,252 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 22:07:27) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  thin (1.2.1) lib/thin/connection.rb:76:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:74:in `catch'
+  thin (1.2.1) lib/thin/connection.rb:74:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:57:in `process'
+  thin (1.2.1) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run_machine'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run'
+  thin (1.2.1) lib/thin/backends/base.rb:57:in `start'
+  thin (1.2.1) lib/thin/server.rb:150:in `start'
+  thin (1.2.1) lib/thin/controllers/controller.rb:80:in `start'
+  thin (1.2.1) lib/thin/runner.rb:173:in `send'
+  thin (1.2.1) lib/thin/runner.rb:173:in `run_command'
+  thin (1.2.1) lib/thin/runner.rb:139:in `run!'
+  thin (1.2.1) bin/thin:6
+  /usr/bin/thin:19:in `load'
+  /usr/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 22:07:43) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  thin (1.2.1) lib/thin/connection.rb:76:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:74:in `catch'
+  thin (1.2.1) lib/thin/connection.rb:74:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:57:in `process'
+  thin (1.2.1) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run_machine'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run'
+  thin (1.2.1) lib/thin/backends/base.rb:57:in `start'
+  thin (1.2.1) lib/thin/server.rb:150:in `start'
+  thin (1.2.1) lib/thin/controllers/controller.rb:80:in `start'
+  thin (1.2.1) lib/thin/runner.rb:173:in `send'
+  thin (1.2.1) lib/thin/runner.rb:173:in `run_command'
+  thin (1.2.1) lib/thin/runner.rb:139:in `run!'
+  thin (1.2.1) bin/thin:6
+  /usr/bin/thin:19:in `load'
+  /usr/bin/thin:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 22:07:59) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  thin (1.2.1) lib/thin/connection.rb:76:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:74:in `catch'
+  thin (1.2.1) lib/thin/connection.rb:74:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:57:in `process'
+  thin (1.2.1) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run_machine'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run'
+  thin (1.2.1) lib/thin/backends/base.rb:57:in `start'
+  thin (1.2.1) lib/thin/server.rb:150:in `start'
+  thin (1.2.1) lib/thin/controllers/controller.rb:80:in `start'
+  thin (1.2.1) lib/thin/runner.rb:173:in `send'
+  thin (1.2.1) lib/thin/runner.rb:173:in `run_command'
+  thin (1.2.1) lib/thin/runner.rb:139:in `run!'
+  thin (1.2.1) bin/thin:6
+  /usr/bin/thin:19:in `load'
+  /usr/bin/thin:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-04 22:08:12) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  thin (1.2.1) lib/thin/connection.rb:76:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:74:in `catch'
+  thin (1.2.1) lib/thin/connection.rb:74:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:57:in `process'
+  thin (1.2.1) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run_machine'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run'
+  thin (1.2.1) lib/thin/backends/base.rb:57:in `start'
+  thin (1.2.1) lib/thin/server.rb:150:in `start'
+  thin (1.2.1) lib/thin/controllers/controller.rb:80:in `start'
+  thin (1.2.1) lib/thin/runner.rb:173:in `send'
+  thin (1.2.1) lib/thin/runner.rb:173:in `run_command'
+  thin (1.2.1) lib/thin/runner.rb:139:in `run!'
+  thin (1.2.1) bin/thin:6
+  /usr/bin/thin:19:in `load'
+  /usr/bin/thin:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-04 22:08:28) [GET]
+Rendering welcome/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-04 22:08:34) [GET]
+Rendering welcome/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-04 22:12:11) [GET]
+Rendering template within layouts/general
+Rendering welcome/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-06 11:55:33) [GET]
+Rendering template within layouts/general
+Rendering welcome/index
+Completed in 31ms (View: 29, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (36.5ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090907012748)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090907012748')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-07 03:29:57) [GET]
+Rendering template within layouts/general
+Rendering welcome/index
+Completed in 30ms (View: 28, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-07 03:30:19) [GET]
+Rendering template within layouts/general
+Rendering sessions/new
+Completed in 42ms (View: 40, DB: 0) | 200 OK [http://127.0.0.1/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-09-07 03:30:23) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"7dWeoT9UWfzoUXQ8CcBWtVLw/hsuezmH3B78KdBVjPI=", "login"=>"s", "password"=>"s"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 's') LIMIT 1[0m
+Failed login for 's' from 127.0.0.1 at Mon Sep 07 01:30:23 UTC 2009
+Rendering template within layouts/general
+Rendering sessions/new
+Completed in 41ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-09-07 03:30:48) [GET]
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/general
+Rendering users/new
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-09-07 03:31:04) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"7dWeoT9UWfzoUXQ8CcBWtVLw/hsuezmH3B78KdBVjPI=", "user"=>{"password_confirmation"=>"918273", "password"=>"918273", "login"=>"mick", "email"=>"faivrem@gmail.com"}}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'mick') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'faivrem@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `remember_token`, `login`, `email`) VALUES('', 'fdfc9105f372123e075e707acde990bcbd73f4f0', '2009-09-07 01:31:04', 'cd55134867ea875e63d1f8cc25cfcb4c98a81e05', NULL, '2009-09-07 01:31:04', NULL, 'mick', 'faivrem@gmail.com')[0m
+  [4;35;1mSQL (4.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 111ms (DB: 7) | 302 Found [http://127.0.0.1/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-07 03:31:04) [GET]
+Rendering template within layouts/general
+Rendering welcome/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 03:31:16) [GET]
+
+ActionController::RoutingError (No route matches "/session/destroy" with {:method=>:get}):
+  thin (1.2.1) lib/thin/connection.rb:76:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:74:in `catch'
+  thin (1.2.1) lib/thin/connection.rb:74:in `pre_process'
+  thin (1.2.1) lib/thin/connection.rb:57:in `process'
+  thin (1.2.1) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run_machine'
+  eventmachine (0.12.6) lib/eventmachine.rb:240:in `run'
+  thin (1.2.1) lib/thin/backends/base.rb:57:in `start'
+  thin (1.2.1) lib/thin/server.rb:150:in `start'
+  thin (1.2.1) lib/thin/controllers/controller.rb:80:in `start'
+  thin (1.2.1) lib/thin/runner.rb:173:in `send'
+  thin (1.2.1) lib/thin/runner.rb:173:in `run_command'
+  thin (1.2.1) lib/thin/runner.rb:139:in `run!'
+  thin (1.2.1) bin/thin:6
+  /usr/bin/thin:19:in `load'
+  /usr/bin/thin:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-09-07 03:31:29) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/destroy]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-07 03:31:30) [GET]
+Rendering template within layouts/general
+Rendering welcome/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-07 03:31:36) [GET]
+Rendering template within layouts/general
+Rendering sessions/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-09-07 03:31:42) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"55P5XvxyKHZCbJnr4v7u+RyoqFsbA6j/turPq21MiDU=", "login"=>"mick", "password"=>"918273"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'mick') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 14ms (DB: 2) | 302 Found [http://127.0.0.1/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-09-07 03:31:42) [GET]
+Rendering template within layouts/general
+Rendering welcome/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/]
