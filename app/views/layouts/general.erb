@@ -1,20 +1,111 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title>ThirdLife</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="Mickael Faivre-Maçon" />
+<meta name="description" content="Game" />
+<meta name="keywords" content="game, text, simple, simulation, life, sim" />
+<link rel="stylesheet" href="/stylesheets/styles.css" type="text/css" />
 </head>
+
 <body>
-<h1>ThirdLife</h1>
-<% if not logged_in? %>
-<%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new) %>
-<%= link_to(I18n.t(:signup), :controller=>:users, :action=>:new) %>
-<% else %>
-<%= link_to(I18n.t(:log_out), :controller=>:sessions, :action=>:destroy) %>
-<% end %>
-<a href="/?locale=en">English</a>
-<a href="/?locale=fr">Français</a>
-<br/>
-<br/>
-<%= yield %>
+<!-- wrap starts here -->
+<div id="wrap">
+
+	<!--header -->
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.html" title="">thirdlife</a></h1>		
+		<p id="slogan">Le jeu qu'il est bien</p>	
+		
+		<div id="top-menu">
+		  <p>
+      <% if not logged_in? %>
+			<%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new) %> |
+      <%= link_to(I18n.t(:signup), :controller=>:users, :action=>:new) %>
+      <% else %>
+      <%= link_to(I18n.t(:log_out), :controller=>:sessions, :action=>:destroy) %>
+      <% end %>
+       | <a href="/?locale=en">English</a> | <a href="/?locale=fr">Français</a>
+      </p>
+		</div>			
+				
+	<!--header ends-->					
+	</div>
+		
+	<!-- navigation starts-->	
+	<div  id="nav">
+		<ul>
+      <% if not logged_in? %>
+			<li id="current"><a href="index.html"><%= I18n.t(:menu_home) %></a></li>
+			<% else %>
+      <li id="current"><%= link_to(I18n.t(:menu_characters), :url=>{:controller=>:characters, :action=>:index}) %></li>
+      <% end %>
+		</ul>
+	<!-- navigation ends-->	
+	</div>					
+			
+	<!-- content starts -->
+	<div id="content">
+	
+		<div id="main">
+				
+      <%= yield %>
+
+		<!-- main ends -->	
+		</div>
+				
+		<div id="sidebar">
+		
+			<h3><%= I18n.t(:about) %></h3>			
+			
+			<p>
+			<a href="index.html"><img src="images/gravatar.jpg" width="40" height="40" alt="image" class="float-left" /></a>
+			C'est un jeu cool tu vois. Mais pour l'instant ya pas grand chose tu vois.
+			
+			</p>	
+			
+<!--			
+			<h3>Search</h3>	
+			
+			<form id="qsearch" action="index.html" method="get" >
+			<p>
+			<label for="qsearch">Search:</label>
+			<input class="tbox" type="text" name="qsearch" value="Search this site..." title="Start typing and hit ENTER" />
+			<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="images/search.gif" />
+			</p>
+			</form>		
+-->
+						
+		<!-- sidebar ends -->		
+		</div>		
+		
+	<!-- content ends-->	
+	</div>
+		
+	<!-- footer starts -->		
+	<div id="footer">
+						
+			<p>
+			&copy; 2009 Mickael Faivre-Maçon
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			Design by : <a href="http://www.styleshout.com/">styleshout</a> | 
+			Valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a> | 
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+			
+   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			<a href="/">Home</a>
+   		</p>			
+	
+	<!-- footer ends-->
+	</div>
+
+<!-- wrap ends here -->
+</div>
+
 </body>
 </html>
-

@@ -1,2 +1,7 @@
+<% if @characters.size == 0 %>
+<%= link_to(I18n.t(:create_character), :controller=>:characters, :action=>:new) %><br/>
+<br/>
+<% end %>
+
 <%= render(:partial=>'character', :collection=>@characters) %>
 

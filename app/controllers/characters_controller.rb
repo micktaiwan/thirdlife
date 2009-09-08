@@ -1,5 +1,7 @@
 class CharactersController < ApplicationController
 
+  before_filter :must_be_logged
+
   def index
     @characters = Character.find(:all, :conditions=>["user_id=?",current_user.id])
   end

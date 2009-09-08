@@ -26,5 +26,9 @@ class ApplicationController < ActionController::Base
     #session[:locale] = I18n.locale = locale
   end
   
+  def must_be_logged
+    redirect_to url_for(:controller=>'welcome', :action=>'index') if not logged_in?
+  end
+  
 end
 

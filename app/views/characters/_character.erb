@@ -1,2 +1,8 @@
-- <%= character.name %><br/>
+<img src="images/gravatar.jpg" width="40" height="40" alt="image" class="float-left" />
+<label>&nbsp;</label><b><%= character.name %></b><br/>
+<label><%= I18n.t(:energy) %>:</label> <%= character.energy %><br/>
+<label><%= I18n.t(:age) %>:</label> <%= character.age %><br/>
+<label><%= I18n.t(:creation_date) %>:</label><%= time_ago_in_words(character.created_at) %>
+<br/>
+<br/>
 
