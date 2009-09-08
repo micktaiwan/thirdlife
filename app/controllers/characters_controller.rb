@@ -4,6 +4,9 @@ class CharactersController < ApplicationController
 
   def index
     @characters = Character.find(:all, :conditions=>["user_id=?",current_user.id])
+    @characters.each { |c|
+      c.update_char
+      }
   end
   
   def new
