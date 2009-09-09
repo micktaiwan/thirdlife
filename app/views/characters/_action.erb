@@ -1,10 +1,11 @@
-<li>
+<li<% if action.started_at%> id="current_action"<%end%>>
 #<%= action.id %>:
 (eating)
+Reste:
 <% if action.started_at%>
-<%= Time.now - action.started_at %> /
+<%= time_ago_in_words(((action.duration - (Time.now - action.started_at))).from_now) %>
+<% else %>
+<%= time_ago_in_words(action.duration.from_now) %>
 <% end %>
-
-<%= action.duration %>
 </li>
 

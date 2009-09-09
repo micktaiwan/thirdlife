@@ -21,7 +21,8 @@ class Character < ActiveRecord::Base
   end  
   
   def eat
-    Action.create(:character_id=>self.id, :type_id=>1, :parameter=>10, :duration=>15.minute)
+    a = Action.create(:character_id=>self.id, :type_id=>1, :parameter=>10, :duration=>15.minute)
+    a.start(self) if actions.size == 1
   end
   
 end

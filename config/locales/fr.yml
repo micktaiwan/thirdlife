@@ -16,6 +16,12 @@ fr:
   age:              "Age"
   creation_date:    "Créé"  
 
+# actions
+
+  eat:              "Manger"
+
+# dates
+
   date:
     formats:
       # Use the strftime parameters for formats.

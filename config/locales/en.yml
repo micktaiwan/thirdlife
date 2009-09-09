@@ -15,7 +15,13 @@ en:
   energy:           "Energy"
   age:              "Age"
   creation_date:    "Created"  
+
+# actions
+
+  eat:              "Eat"
   
+# dates
+
   date:
     formats:
       # Use the strftime parameters for formats.

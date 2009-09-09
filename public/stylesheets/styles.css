@@ -366,6 +366,7 @@ input.button {
 	color: #000;	
 	background: none;	
 }
+
 #sidebar .sidemenu ul { margin: 0 0 0 5px; padding: 0; }
 #sidebar .sidemenu ul li { border: none; }
 
@@ -514,4 +515,7 @@ ol.commentlist {
 	content: "."; 
 }
 
+#current_action {
+  background-color: #FFA;
+  }
 
