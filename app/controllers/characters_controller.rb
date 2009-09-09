@@ -25,5 +25,11 @@ class CharactersController < ApplicationController
     end
   end
   
+  def eat
+    c = Character.find(params[:id])
+    c.eat
+    render(:partial=>'action', :collection=>c.actions)
+  end
+  
 end
 

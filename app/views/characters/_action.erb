@@ -1,0 +1,10 @@
+<li>
+#<%= action.id %>:
+(eating)
+<% if action.started_at%>
+<%= Time.now - action.started_at %> /
+<% end %>
+
+<%= action.duration %>
+</li>
+

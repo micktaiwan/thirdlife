@@ -2,7 +2,11 @@
 <label>&nbsp;</label><b><%= character.name %></b><br/>
 <label><%= I18n.t(:energy) %>:</label> <%= character.energy %><br/>
 <label><%= I18n.t(:age) %>:</label> <%= character.age %><br/>
-<label><%= I18n.t(:creation_date) %>:</label><%= time_ago_in_words(character.created_at) %>
+<label><%= I18n.t(:creation_date) %>:</label><%= time_ago_in_words(character.created_at) %><br/>
+<%= link_to_remote(I18n.t(:eat), :url=>{:controller=>:characters, :action=>'eat', :id=>character.id}, :update=>"actions_#{character.id}") %><br/>
 <br/>
 <br/>
+<ol id='actions_<%=character.id%>'>
+<%= render(:partial=>'action', :collection=>character.actions) %>
+</ol>
 
