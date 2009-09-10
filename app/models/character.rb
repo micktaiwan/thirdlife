@@ -2,9 +2,12 @@ class Character < ActiveRecord::Base
 
   def update_char
     now = Time.now
+    elapsed = now - self.time_updated_at
+    return if elapsed < 1
     self.age = (now - self.created_at)/1.day
-    self.energy -= 5*((now - self.updated_at)/1.hour)
+    self.energy -= 5*(elapsed/1.hour)
     make_actions
+    self.time_updated_at = now
     save
   end
   
@@ -21,7 +24,11 @@ class Character < ActiveRecord::Base
   end  
   
   def eat
-    a = Action.create(:character_id=>self.id, :type_id=>1, :parameter=>10, :duration=>15.minute)
+    a = Action.create(
+      :character_id=>self.id,
+      :duration=>15.minute,
+      :type_id=>1,
+      :affects=>"{:energy=>10}")
     a.start(self) if actions.size == 1
   end
   

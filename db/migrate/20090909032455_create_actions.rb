@@ -1,11 +1,11 @@
 class CreateActions < ActiveRecord::Migration
   def self.up
     create_table :actions do |t|
-      t.integer :character_id
-      t.integer :type_id
-      t.integer :parameter
+      t.integer  :character_id
       t.datetime :started_at
       t.integer  :duration
+      t.integer  :type_id
+      t.text     :affects # "{:energy=>10, :hunger=>-10, :mood=>5}"
       t.timestamps
     end
   end

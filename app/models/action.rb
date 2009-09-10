@@ -10,6 +10,7 @@ class Action < ActiveRecord::Base
       Action.destroy(self.id)
       return now - (elapsed - self.duration)
     end
+    affect!(char)
     return nil
   end
   
@@ -19,12 +20,26 @@ class Action < ActiveRecord::Base
     else
       self.started_at = Time.now 
     end
-    case self.type_id
-      when 1 # eat
-        char.energy += self.parameter
-        char.save
-    end    
     self.save
   end
 
+  def affect!(char)
+    now = Time.now
+    elapsed = now - char.affected_at
+    return if elapsed < 1
+    factor = elapsed / self.duration
+    get_cursors.each { |k,v|
+      eval("char.#{k.to_s} += #{v*factor}")
+      }
+    char.affected_at = now
+    char.save
+  end
+
+private
+
+  def get_cursors
+    eval(self.affects)
+  end  
+  
 end
+

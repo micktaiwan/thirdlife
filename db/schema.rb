@@ -13,10 +13,10 @@ ActiveRecord::Schema.define(:version => 20090909032455) do
 
   create_table "actions", :force => true do |t|
     t.integer  "character_id"
-    t.integer  "type_id"
-    t.integer  "parameter"
     t.datetime "started_at"
     t.integer  "duration"
+    t.integer  "type_id"
+    t.text     "affects"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,8 +24,15 @@ ActiveRecord::Schema.define(:version => 20090909032455) do
   create_table "characters", :force => true do |t|
     t.integer  "user_id"
     t.string   "name"
-    t.float    "age",        :default => 0.0
-    t.float    "energy",     :default => 100.0
+    t.float    "age",             :default => 0.0
+    t.float    "energy",          :default => 100.0
+    t.float    "hunger",          :default => 0.0
+    t.float    "health",          :default => 100.0
+    t.integer  "xp",              :default => 0
+    t.integer  "mood",            :default => 50
+    t.integer  "money",           :default => 0
+    t.datetime "time_updated_at", :default => '2009-09-11 00:11:42'
+    t.datetime "affected_at",     :default => '2009-09-11 00:11:42'
     t.datetime "created_at"
     t.datetime "updated_at"
   end
