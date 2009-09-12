@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(:version => 20090909032455) do
     t.integer  "xp",              :default => 0
     t.integer  "mood",            :default => 50
     t.integer  "money",           :default => 0
-    t.datetime "time_updated_at", :default => '2009-09-11 00:11:42'
-    t.datetime "affected_at",     :default => '2009-09-11 00:11:42'
+    t.datetime "time_updated_at", :default => '2009-09-12 08:51:27'
+    t.datetime "affected_at",     :default => '2009-09-12 08:51:27'
     t.datetime "created_at"
     t.datetime "updated_at"
   end

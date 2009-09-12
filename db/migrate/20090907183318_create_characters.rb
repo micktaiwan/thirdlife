@@ -10,7 +10,7 @@ class CreateCharacters < ActiveRecord::Migration
       t.integer   :xp, :default=>0
       t.integer   :mood, :default=>50
       t.integer   :money, :default=>0
-      now = Time.now
+      now = Time.zone.now
       t.datetime  :time_updated_at, :default=>now # last updated because of time passed
       t.datetime  :affected_at, :default=>now # last action update
       t.timestamps

@@ -1,7 +1,7 @@
 class Character < ActiveRecord::Base
 
   def update_char
-    now = Time.now
+    now = Time.zone.now
     elapsed = now - self.time_updated_at
     return if elapsed < 1
     self.age = (now - self.created_at)/1.day

@@ -4,7 +4,7 @@ class Action < ActiveRecord::Base
   # start_time: started_at depend on previous action
   def make(char=nil, start_time=nil)
     start(char, start_time) if not self.started_at
-    now = Time.now
+    now = Time.zone.now
     elapsed = now - self.started_at
     if elapsed > self.duration
       Action.destroy(self.id)
@@ -18,13 +18,13 @@ class Action < ActiveRecord::Base
     if start_time
       self.started_at = start_time
     else
-      self.started_at = Time.now 
+      self.started_at = Time.zone.now 
     end
     self.save
   end
 
   def affect!(char)
-    now = Time.now
+    now = Time.zone.now
     elapsed = now - char.affected_at
     return if elapsed < 1
     factor = elapsed / self.duration
