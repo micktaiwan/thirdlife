@@ -22,10 +22,11 @@ class Action < ActiveRecord::Base
     end
     self.save
   end
-
+  
   def affect!(char)
     now = Time.now
-    elapsed = now - char.affected_at
+    last_date = char.affected_at < self.started_at ? self.started_at : char.affected_at
+    elapsed = now - last_date
     return if elapsed < 1
     factor = elapsed / self.duration
     get_cursors.each { |k,v|
