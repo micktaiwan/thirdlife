@@ -9,3 +9,4 @@ class ActionsController < ApplicationController
   end
 
 end
+

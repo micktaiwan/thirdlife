@@ -17,6 +17,7 @@ class Action < ActiveRecord::Base
   end
   
   def start(char=nil, start_time=nil)
+    return if self.started_at
     if start_time
       self.started_at = start_time
     else

@@ -6,13 +6,13 @@ class Character < ActiveRecord::Base
     return if elapsed < 1
     time_action(now,elapsed)
     make_actions
-    verify_state
+    verify_cursors
     self.time_updated_at = now
     save
   end
 
   def time_action(now,elapsed)
-    self.age = (now - self.created_at)/1.day
+    self.age     = (now - self.created_at)/1.day
     self.energy -= 5*(elapsed/1.hour)
     self.health -= 1*(elapsed/1.hour)
     self.hunger += 2*(elapsed/1.hour)
@@ -28,25 +28,47 @@ class Character < ActiveRecord::Base
       }
   end
   
-  def verify_state
+  def verify_cursors
  
     to_destroy = nil
     
     if self.hunger < 0
       self.hunger = 0
-      to_destroy = true if ca.type_id == ACTION_EAT
+      destroy_next_if(ACTION_EAT)
       # TODO log, so we can tell the user
     end
 
-    @current_action.destroy if to_destroy
-    # should start next action
+    if self.mood > 100
+      self.mood = 100
+      destroy_next_if(ACTION_PLAY)
+      # TODO log, so we can tell the user
+    end
 
+    if self.energy > 100
+      self.energy = 100
+      destroy_next_if(ACTION_SLEEP)
+      # TODO log, so we can tell the user
+    end
+  
+    start_next
+  
   end
+  
+  def start_next
+    a = Action.find(:first, :conditions=>["character_id=?",self.id], :order=>"id")
+    a.start(self, nil) if a
+  end  
   
   def actions
     Action.find(:all, :conditions=>["character_id=?",self.id], :order=>"id")
   end  
 
+  def destroy_next_if(type_id)
+    actions.each { |a|
+      break if a.type_id != type_id
+      a.destroy 
+      }
+  end
 
   def do_action_type(type)
     case type
@@ -61,7 +83,7 @@ class Character < ActiveRecord::Base
       :character_id=>self.id,
       :duration=>15.minute,
       :type_id=>1,
-      :affects=>"{:energy=>20, :health=>5, :mood=>5, :hunger=>-50}")
+      :affects=>"{:energy=>5, :health=>5, :mood=>5, :hunger=>-50}")
     a.start(self) if actions.size == 1
   end
 
@@ -70,7 +92,7 @@ class Character < ActiveRecord::Base
       :character_id=>self.id,
       :duration=>4.hours,
       :type_id=>2,
-      :affects=>"{:energy=>50, :health=>5, :mood=>10, :hunger=>20}")
+      :affects=>"{:energy=>50, :health=>5, :mood=>10}")
     a.start(self) if actions.size == 1
   end
 
