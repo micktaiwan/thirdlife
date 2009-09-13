@@ -25,9 +25,10 @@ class CharactersController < ApplicationController
     end
   end
   
-  def eat
+  def do_action
+    type = params[:type].to_i
     c = Character.find(params[:id])
-    c.eat
+    c.do_action_type(type)
     render(:partial=>'action', :collection=>c.actions)
   end
   

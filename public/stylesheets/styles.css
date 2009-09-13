@@ -156,7 +156,7 @@ form p {
 label {
 	font-weight: bold;
 	color: #A7743B;
-  width: 60px;
+  width: 80px;
   float: left;
   text-align: right;
   margin-right: 4px;
@@ -515,7 +515,7 @@ ol.commentlist {
 	content: "."; 
 }
 
-#current_action {
+.current_action {
   background-color: #FFA;
   }
 

@@ -1,9 +1,17 @@
-<img src="images/gravatar.jpg" width="40" height="40" alt="image" class="float-left" />
+<img src="images/gravatar.jpg" width="40" height="40" alt="image" class="float-right" />
 <label>&nbsp;</label><b><%= character.name %></b><br/>
+<label><%= I18n.t(:age) %>:</label> <%= display_age(character.age) %><br/>
 <label><%= I18n.t(:energy) %>:</label> <%= character.energy %><br/>
-<label><%= I18n.t(:age) %>:</label> <%= character.age %><br/>
+<label><%= I18n.t(:hunger) %>:</label> <%= character.hunger %><br/>
+<label><%= I18n.t(:health) %>:</label> <%= character.health %><br/>
+<label><%= I18n.t(:xp) %>:</label> <%= character.xp %><br/>
+<label><%= I18n.t(:mood) %>:</label> <%= character.mood %><br/>
+<label><%= I18n.t(:money) %>:</label> <%= character.money %><br/>
 <label><%= I18n.t(:creation_date) %>:</label><%= time_ago_in_words(character.created_at) %><br/>
-<%= link_to_remote(I18n.t(:eat), :url=>{:controller=>:characters, :action=>'eat', :id=>character.id}, :update=>"actions_#{character.id}") %><br/>
+<%= link_to_remote(I18n.t(:eat), :url=>{:controller=>:characters, :action=>'do_action', :id=>character.id, :type=>1}, :update=>"actions_#{character.id}") %>
+<%= link_to_remote(I18n.t(:sleep), :url=>{:controller=>:characters, :action=>'do_action', :id=>character.id, :type=>2}, :update=>"actions_#{character.id}") %>
+<%= link_to_remote(I18n.t(:play), :url=>{:controller=>:characters, :action=>'do_action', :id=>character.id, :type=>3}, :update=>"actions_#{character.id}") %>
+<br/>
 <ol id='actions_<%=character.id%>'>
 <%= render(:partial=>'action', :collection=>character.actions) %>
 </ol>

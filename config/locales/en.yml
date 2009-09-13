@@ -13,12 +13,19 @@ en:
   character_name:   "Name"
   created_msg:      "A new baby is born !"
   energy:           "Energy"
+  hunger:           "Hunger"
+  health:           "Health"
+  xp:               "Experience"
+  mood:             "Mood"
+  money:            "Money"
   age:              "Age"
   creation_date:    "Created"  
 
 # actions
 
   eat:              "Eat"
+  sleep:            "Sleep"
+  play:             "Play"
   
 # dates
 

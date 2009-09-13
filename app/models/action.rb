@@ -1,5 +1,7 @@
 class Action < ActiveRecord::Base
 
+  belongs_to :character
+
   # char: so we do no have to search for char again
   # start_time: started_at depend on previous action
   def make(char=nil, start_time=nil)
@@ -23,7 +25,8 @@ class Action < ActiveRecord::Base
     self.save
   end
   
-  def affect!(char)
+  def affect!(char=nil)
+    char = character if not char
     now = Time.zone.now
     last_date = char.affected_at < self.started_at ? self.started_at : char.affected_at
     elapsed = now - last_date

@@ -7,8 +7,8 @@ class CreateCharacters < ActiveRecord::Migration
       t.float     :energy, :default=>100
       t.float     :hunger, :default=>0
       t.float     :health, :default=>100
-      t.integer   :xp, :default=>0
-      t.integer   :mood, :default=>50
+      t.float     :xp, :default=>0
+      t.float     :mood, :default=>50
       t.integer   :money, :default=>0
       now = Time.zone.now
       t.datetime  :time_updated_at, :default=>now # last updated because of time passed

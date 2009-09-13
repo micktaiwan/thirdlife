@@ -1,11 +1,12 @@
-<li<% if action.started_at%> id="current_action"<%end%>>
+<li id="action_<%=action.id %>"<% if action.started_at%> class="current_action"<%end%>>
 #<%= action.id %>:
-(eating)
+<%= action.type_id %>
 Reste:
 <% if action.started_at%>
 <%= time_ago_in_words(((action.duration - (Time.now - action.started_at))).from_now) %>
 <% else %>
 <%= time_ago_in_words(action.duration.from_now) %>
 <% end %>
+<%= link_to_remote('destroy', {:url=>{:controller=>'actions', :action=>'destroy', :id=>action.id}, :success=>"$('action_#{action.id}').fade()", :failure=>"alert('oops')"}) %>
 </li>
 
