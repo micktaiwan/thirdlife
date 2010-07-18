@@ -13,10 +13,10 @@ class Character < ActiveRecord::Base
 
   def time_action(now,elapsed)
     self.age     = (now - self.created_at)/1.day
-    self.energy -= 5*(elapsed/1.hour)
+    self.energy -= 1*(elapsed/1.hour)
     self.health -= 1*(elapsed/1.hour)
-    self.hunger += 2*(elapsed/1.hour)
-    self.mood   -= 10*(elapsed/1.hour)
+    self.hunger += 1*(elapsed/1.hour)
+    self.mood   -= 1*(elapsed/1.hour)
   end
   
   def make_actions
@@ -81,7 +81,7 @@ class Character < ActiveRecord::Base
   def eat
     a = Action.create(
       :character_id=>self.id,
-      :duration=>15.minute,
+      :duration=>3.minute,
       :type_id=>1,
       :affects=>"{:energy=>5, :health=>5, :mood=>5, :hunger=>-50}")
     a.start(self) if actions.size == 1
@@ -90,9 +90,9 @@ class Character < ActiveRecord::Base
   def sleep
     a = Action.create(
       :character_id=>self.id,
-      :duration=>4.hours,
+      :duration=>5.minutes,
       :type_id=>2,
-      :affects=>"{:energy=>50, :health=>5, :mood=>10}")
+      :affects=>"{:energy=>50, :health=>5, :mood=>50}")
     a.start(self) if actions.size == 1
   end
 
@@ -101,7 +101,7 @@ class Character < ActiveRecord::Base
       :character_id=>self.id,
       :duration=>2.minutes,
       :type_id=>3,
-      :affects=>"{:energy=>-10, :health=>1, :mood=>40, :hunger=>5, :xp=>1}")
+      :affects=>"{:energy=>-10, :health=>1, :mood=>50, :hunger=>5, :xp=>1}")
     a.start(self) if actions.size == 1
   end
   
